@@ -1,4 +1,3 @@
-import AnimatedCursor from './components/AnimatedCursor'
 import SmoothFollower from './components/SmoothFollower'
 import Main from './pages/Main'
 

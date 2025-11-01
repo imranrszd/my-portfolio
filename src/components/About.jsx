@@ -1,10 +1,10 @@
-import ProfileImage from "./ProfileImage";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function About() {
   return (
     <section className="snap-start h-screen flex flex-col items-start justify-center overflow-x-hidden">
       <div className="h-[18vh] bg-white w-full relative">
-        <div className="absolute right-[15%] top-0 h-full w-50 flex justify-center items-center">
+        <div className="bg-white absolute right-[15%] top-0 h-full w-50 flex justify-center items-center">
           <hr className="bg-(--primary-color) w-0.5 h-full" />
         </div>
       </div>
@@ -12,7 +12,8 @@ export default function About() {
         <div className="w-full h-20 absolute left-0 top-10 flex justify-start items-center">
           <hr className="bg-white w-full h-0.5 absolute" />
           <div className="w-[35%] h-20 absolute flex justify-end items-center pr-8 bg-(--primary-color)">
-            <h1 className="text-5xl font-medium">OVER THE YEAR</h1>
+            <AnimatedTitle text="OVER THE YEAR" fontSize="3em" />
+            {/* <h1 className="text-5xl font-medium">OVER THE YEAR</h1> */}
           </div>
         </div>
         <div className="absolute right-[15%] top-0  w-50 h-full flex justify-center items-center">

@@ -2,8 +2,8 @@
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-export default function MagnifyText() {
-  const text = "IMRAN'S PORTFOLIO";
+export default function MagnifyText({ text, fontSize }) {
+  // const text = "IMRAN'S PORTFOLIO";
   const [hoverIndex, setHoverIndex] = useState(null);
 
   const handleMouseMove = (index) => setHoverIndex(index);
@@ -27,7 +27,8 @@ export default function MagnifyText() {
               stiffness: 300,
               damping: 20,
             }}
-            className="text-6xl font-bold tracking-wide cursor-default"
+            className="font-bold tracking-wide cursor-default"
+            style={{ fontSize }}
           >
             {letter === " " ? "\u00A0" : letter}
           </motion.span>
