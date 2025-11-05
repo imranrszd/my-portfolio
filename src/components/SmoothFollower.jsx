@@ -17,19 +17,35 @@ export default function SmoothFollower() {
   const BORDER_DOT_SMOOTHNESS = 0.1;
 
   useEffect(() => {
+    function getEffectiveBackgroundColor(element) {
+      let el = element;
+
+      while (el && el !== document.documentElement) {
+        const bg = window.getComputedStyle(el).backgroundColor;
+        const rgba = bg.match(/\d+(\.\d+)?/g);
+
+        // rgba(...) = [r,g,b,a]
+        if (rgba && (rgba.length < 4 || rgba[3] !== "0")) {
+          return `rgb(${rgba[0]},${rgba[1]},${rgba[2]})`;
+        }
+
+        el = el.parentElement;
+      }
+
+      // fallback if nothing found
+      return "rgb(255,255,255)";
+    }
+
     const handleMouseMove = (e) => {
       mousePosition.current = { x: e.clientX, y: e.clientY };
 
-      // Get element under the cursor
       const el = document.elementFromPoint(e.clientX, e.clientY);
       if (el) {
-        const bg = window.getComputedStyle(el).backgroundColor;
-        const rgb = bg.match(/\d+/g);
-        if (rgb) {
-          const brightness =
-            (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
-          setCursorColor(brightness > 0.6 ? 'black' : 'white');
-        }
+        const bg = getEffectiveBackgroundColor(el);
+        const [r, g, b] = bg.match(/\d+/g).map(Number);
+
+        const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        setCursorColor(brightness > 0.6 ? 'black' : 'white');
       }
     };
 

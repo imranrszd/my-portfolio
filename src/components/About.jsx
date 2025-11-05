@@ -13,7 +13,6 @@ export default function About() {
           <hr className="bg-white w-full h-0.5 absolute" />
           <div className="w-[35%] h-20 absolute flex justify-end items-center pr-8 bg-(--primary-color)">
             <AnimatedTitle text="OVER THE YEAR" fontSize="3em" />
-            {/* <h1 className="text-5xl font-medium">OVER THE YEAR</h1> */}
           </div>
         </div>
         <div className="absolute right-[15%] top-0  w-50 h-full flex justify-center items-center">
