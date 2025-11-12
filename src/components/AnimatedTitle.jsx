@@ -3,7 +3,6 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function MagnifyText({ text, fontSize }) {
-  // const text = "IMRAN'S PORTFOLIO";
   const [hoverIndex, setHoverIndex] = useState(null);
 
   const handleMouseMove = (index) => setHoverIndex(index);

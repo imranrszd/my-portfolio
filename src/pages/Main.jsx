@@ -1,6 +1,7 @@
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Home from "../components/Home";
+import Contact from "../components/Contact";
 
 function Main() {
   return (
@@ -12,9 +13,7 @@ function Main() {
 
       <Projects />
 
-      <section className="snap-start h-screen white flex items-center justify-center">
-        <h1 className="text-(--primary-color) text-5xl">Contacts</h1>
-      </section>
+      <Contact />
     </main>
   );
 }
