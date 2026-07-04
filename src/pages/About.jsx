@@ -55,8 +55,9 @@ function About() {
               </h1>
               <p className="md:text-lg mb-8">
                 - Bachelor of Information Systems (Intelligent Systems Engineering) at Universiti Teknologi MARA (Present)<br />
-                - Freelance / Part-time Web Developer at Qylex Solution (2025)<br />
-                - Internship at Julytech Sdn Bhd (2024)
+                - Freelance / Part-time Developer at Qylex Solution (2025-2026)<br />
+                - Internship at Julytech Sdn Bhd (2024)<br />
+                - Diploma in Computer Science (2022-2024)
               </p>
               <h1 className="text-2xl md:text-3xl font-bold mb-5">
                 SKILLS
