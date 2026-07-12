@@ -2,6 +2,13 @@ import { text } from "framer-motion/client";
 
 export const projects = [
   {
+    id: "chest-xray-gan",
+    title: "cGAN Chest X-Ray Image Enhancement",
+    tech: "Python, pix2pix cGAN, PyTorch, HuggingFace",
+    year: 2026,
+    type: "ai",
+  },
+  {
     id: "minigift-by-juheraa",
     title: "minigift by Juheraa",
     link: "https://minigiftbyjuheraa.com/",

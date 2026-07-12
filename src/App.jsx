@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import ProjectDetail from "./pages/ProjectDetail";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+import AIProjectDetail from "./pages/AIProjectDetail";
 import Analytics from "./components/Analytics";
 
 function AnimatedRoutes() {
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+        <Route path="/ai/:id" element={<AIProjectDetail />} />
       </Routes>
     </AnimatePresence>
   );

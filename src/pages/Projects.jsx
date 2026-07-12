@@ -75,6 +75,18 @@ function Projects() {
               >
                 Analysis
               </button>
+
+              <span>-</span>
+
+              <button
+                onClick={() => setTab("ai")}
+                className={`cursor-pointer ${tab === "ai"
+                  ? "underline"
+                  : "opacity-60 hover:opacity-100"
+                  }`}
+              >
+                AI
+              </button>
             </div>
 
             {/* projects */}
@@ -84,6 +96,8 @@ function Projects() {
                 to={
                   project.type === "analysis"
                     ? `/case-study/${project.id}`
+                    : project.type === "ai"
+                    ? `/ai/${project.id}`
                     : `/projects/${project.id}`
                 }
               >
