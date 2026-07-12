@@ -85,11 +85,27 @@ function AIProjectDetail() {
                 {project.tech} — {project.year}
               </p>
 
-              <h1 className="font-mono text-4xl md:text-6xl font-bold leading-tight mb-6">
-                {project.title}
-              </h1>
+              
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-4 text-4xl md:text-5xl font-bold leading-tight hover:underline"
+                >
+                  <span>{project.title}</span>
+                  <ExternalLink
+                    size={32}
+                    className="opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all shrink-0"
+                  />
+                </a>
+              ) : (
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                  {project.title}
+                </h1>
+              )}
 
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10 mt-8">
                 {project.description}
               </p>
 
