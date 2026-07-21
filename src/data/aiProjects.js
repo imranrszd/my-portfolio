@@ -7,7 +7,7 @@ export const aiProjects = [
     year: 2026,
     type: "ai",
     image: "images/chest-gan.png",
-    link: "https://huggingface.co/spaces/imranrszd/chest-xray-gan-enhancement",
+    link: "https://imranrszd.github.io/chest-xray-gan-enhancement/",
 
     description:
       "A deep learning system that restores low-quality chest X-ray images using a Conditional GAN. Reaching 87% structural similarity. Tested on 734 images: perceptual error dropped 86%, pixel clarity (PSNR) roughly doubled, and every single image improved.",
@@ -65,7 +65,7 @@ export const aiProjects = [
     ],
 
     links: {
-      demo: "https://huggingface.co/spaces/imranrszd/chest-xray-gan-enhancement",
+      demo: "https://imranrszd.github.io/chest-xray-gan-enhancement/",
       samples: "https://drive.google.com/drive/folders/1Y9-SOr1_2kW8_vxeDanWdYGDNkEsfSGl?usp=sharing",
     },
   },
